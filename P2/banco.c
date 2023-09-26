@@ -30,5 +30,6 @@ void criaCliente(cliente *Lt){
   scanf("%f", &Lt->saldo);
   printf("Digite sua senha(maximo 10): ");
   fgets(Lt->senha,10,stdin);
+  //oi
   clearBuffer();
 }
