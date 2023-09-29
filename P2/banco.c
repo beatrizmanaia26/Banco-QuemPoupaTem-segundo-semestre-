@@ -1,5 +1,8 @@
 #include "banco.h"
 #include <stdio.h>
+
+#include "banco.h"
+#include <stdio.h>
 #include <string.h>
 
 void menu(){
@@ -12,7 +15,8 @@ void menu(){
   printf("7. Transferência entre contas\n");
   printf("8. Sair\n");
 }
-//strcmp compara duas strings: 0 igual, 1 diferentes
+//strcmp  0 igual 1 diferentes
+
 
 void clearBuffer(){
   int c;
@@ -57,13 +61,13 @@ void criaCliente(listaClientes *Lt){
   } 
 }
   
-int deletarCliente(listaClientes *Lt){
+void deletarCliente(listaClientes *Lt){
 int numero = 0;
     printf("Digite o cpf do tarefa que deseja deletar: ");
     scanf("%d",&numero);
-    if (Lt->quantidade == 0 || Lt->quantidade <= numero){   
+    if (Lt->quantidade == 0 || Lt->quantidade < numero){   
         printf("Falha ao deletar a tarefa :( \n ");
-        return 1;
+        
     }
     for (int search = numero - 1; search < Lt->quantidade; search ++ ){
         strcpy(Lt->Cliente[search].cpf, Lt->Cliente[search +1].cpf);
@@ -75,7 +79,7 @@ int numero = 0;
         Lt->quantidade--;
     }
     printf("Deletou com sucesso!\n");
-    return 0;
+    
 }
 
 void clearBuffer();

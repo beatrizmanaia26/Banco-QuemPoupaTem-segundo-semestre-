@@ -18,11 +18,12 @@ typedef struct{
 }listaClientes;
 
 typedef enum{COMUM, PLUS} tipoConta; //comparação com enum é mais fácil  COMUM = 0, PLUS = 1
-typedef enum{err_cria,err_del,err_tipo,err_valor,err_saldo_comum}erros; //???????????
+typedef enum{err_cria,err_del,err_tipo,err_valor,err_saldo_comum}erros;
 void menu();
 
 void criaCliente(listaClientes *Lt);
-int deletarCliente(listaClientes *Lt);
+void deletarCliente(listaClientes *Lt);
+void deposito(listaClientes *Lt);
 
 void clearBuffer();
 

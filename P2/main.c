@@ -16,9 +16,13 @@ int main(void) {
       case 2 :
         deletarCliente(&Lt);
         break;
+      
+      
     }
     
   }while(opcao != 0);
   
   return 0;
 }
+
+
